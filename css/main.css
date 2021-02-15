@@ -256,13 +256,12 @@ img {
   border-radius: 2%;
   padding: 10px;
   flex-basis: 100%;
-
 }
 
 .portfolio__info {
   display: flex;
   flex-direction: column;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
 
 .portfolio__item {
@@ -270,8 +269,8 @@ img {
 }
 
 .portfolio__img {
-  height:100%;
-  object-fit:contain;
+  height: 100%;
+  object-fit: contain;
   transition:
     transform 750ms cubic-bezier(0.5, 0, 0.5, 1),
     opacity 250ms linear;
@@ -333,7 +332,7 @@ img {
     flex-basis: 100%;
   }
 
-  .service + .service {
+  .service+.service {
     margin-left: 1em;
   }
 }
