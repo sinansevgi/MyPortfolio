@@ -1,0 +1,1 @@
+(()=>{var e=document.querySelector(".nav-toggle"),n=document.querySelectorAll(".nav__link");e.addEventListener("click",(function(){document.body.classList.toggle("nav-open")})),n.forEach((function(e){e.addEventListener("click",(function(){document.body.classList.remove("nav-open")}))}))})();
