@@ -253,6 +253,7 @@ header {
 
 .section__title--intro {
   text-align: center;
+  grid-area: title;
 }
 
 .section__title--intro strong {
@@ -263,12 +264,25 @@ header {
   margin: 0;
   font-size: var(--fs-h5);
 }
-
+.intro{
+  text-align: center;
+}
 .intro__img {
   box-shadow:
     0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15),
     var(--std-shadow);
+}
+
+.intro__social{
+  margin-bottom: 3em;
+}
+
+.intro__social a{
+  color: var(--foreground);
+}
+.intro__social li{
+  box-shadow: 0.15em 0.15em var(--foreground);
 }
 
 .section__subtitle--intro,
@@ -431,6 +445,91 @@ header {
   opacity: 0.7;
 }
 
+#modal {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: var(--background);
+  color: var(--foreground);
+  border: 3px solid var(--clr-primary);
+  padding: 20px;
+  box-shadow: 0.4em 0.4em var(--clr-secondary);
+  max-width: 600px;
+  max-height: 600px;
+  margin: 0 auto;
+  position: relative;
+  top: 10%;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal__top{
+  max-height: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+.modal__title{
+  margin-right: auto;
+}
+#project__info{
+  margin-top: 2em;
+}
+.close-modal {
+  background: var(--foreground);
+  border: 0;
+  box-shadow: 0.2em 0.2em var(--clr-secondary);
+  padding: 1em 0.5em;
+}
+
+.modal__menu{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 2em 0 0;
+  padding: 0;
+}
+.modal__menu .button{
+  padding: 0 10px;
+}
+
+.modal__close {
+  display: block;
+  position: relative;
+  transform: rotate(0.625turn);
+}
+
+.modal__close,
+.modal__close::before{
+  background-color: var(--background);
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+}
+
+.modal__close::before {
+  transform: rotate(90deg) translateX(-6px);
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 6px;
+}
+
+.modal__top, .modal__info, .modal__links{
+  width: 100%;
+}
+
 /* Larger than mobile */
 @media (min-width: 480px) {
   .container {
@@ -505,5 +604,8 @@ header {
   :root {
     --foreground: var(--clr-light);
     --background: var(--clr-dark);
+  }
+  #overlay{
+    background-color: rgba(255, 255, 255, 0.3);;
   }
 }

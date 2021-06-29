@@ -88,7 +88,10 @@ fabric.properties
 .DS_Store
 *.log
 .idea
+.idea/modules.xml
+.idea/MyPortfolio.iml
 .vscode
+.gitignore
 .cache
 .eslintcache
 package-lock.json
