@@ -34,18 +34,18 @@ document.getElementById("project1").addEventListener('click',(e)=>{
 });
 document.getElementById("project2").addEventListener('click',(e)=>{
     openModal(e);
-    const prTitle = "Homecook";
-    const prDesc = "This is a C++ recipe management/suggestion project";
+    const prTitle = " Dietify";
+    const prDesc = "Dietify helps you to keep track of your calorie intake. Made with Rails, React and Redux";
     const prImg = "./images/portfolio-images/homecook.png";
-    const prRepo = "https://github.com/ericgfx/CPP_HomeCook";
-    const prDemo = "https://github.com/ericgfx/CPP_HomeCook";
+    const prRepo = "https://github.com/sinansevgi/Dietify/";
+    const prDemo = "https://dietify-react.netlify.app/";
     setProject(prTitle,prDesc,prImg,prRepo,prDemo);
 });
 document.getElementById("project3").addEventListener('click',(e)=>{
     openModal(e);
     const prTitle = "Programming Articles";
     const prDesc = "Ruby on Rails Blog/article management application";
-    const prImg = "./images/portfolio-images/booksandscrolls.png";
+    const prImg = "./images/portfolio-images/pmarticles.png";
     const prRepo = "https://github.com/sinansevgi/capstonestore";
     const prDemo = "https://sinansevgi.github.io/capstonestore/";
     setProject(prTitle,prDesc,prImg,prRepo,prDemo);
